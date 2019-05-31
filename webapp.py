@@ -94,6 +94,7 @@ def inject_logged_in():
 
 @app.route('/')
 def home():
+    print(collection.count)
     try:
         print(session['user_data']['login'])
         return render_template('Home.html')
